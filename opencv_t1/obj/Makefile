@@ -6,16 +6,16 @@ CFLAGS  = -c -g3 -o0 -Wall $(shell pkg-config --cflags opencv)
 LDFLAGS = $(shell pkg-config --libs opencv)
 
 #Name of executable
-all: t1
+all: md
 
 #Link 
-t1: boneCV.o
+md: main.o
 	$(CC) $(LDFLAGS) $< -o $@
 
 #Compile
-boneCV.o: ../src/boneCV.cpp
+main.o: ../src/main.cpp
 	$(CC) $(CFLAGS) $< -o $@
 
 
 clean:
-	rm -rf *.o t1
+	rm -rf *.o md
