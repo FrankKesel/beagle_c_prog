@@ -1,4 +1,4 @@
-#Makefile for opencv_t1 project
+#Makefile for motion detect (md) project
 
 #Compiler and flags
 CC      = g++
